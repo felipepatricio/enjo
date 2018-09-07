@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Enjoei</title>
+  <link rel="icon" type="image/png" href="../../../favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../../css/resume.css">
+</head>
+<body>
+  <header class="header">
+    <img src="../../../img/logo.svg" alt="logo enjoei">
+  </header>
+    <div class="checkout-image section">
+      <img id="image-product" class="product-image">
+    </div>
+    <div class="Checkout__coupon">
+      <div class="checkout-header">
+        <span class="checkout-title">cupons</span>
+      </div>
+      <div class="Checkout__content">
+        <form class="Form">
+          <ul class="">
+            <li>
+              <input type="radio" id="none-coupons" name="coupons">
+              <label for="none-coupons">não usar cupom</label>
+              <span></span>
+              <div class="check"></div>
+            </li>
+            <li>
+              <input type="radio" id="with-coupons" name="coupons">
+              <span class="coupon-value value-coupon-list" id="value-coupon" hidden></span>
+              <label for="with-coupons"></label>
+              <div class="check"></div>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <div class="checkout-header section">
+      <span class="checkout-title">resumo</span>
+    </div>
+    <div class="container section">
+      <ul class="checkout-list">
+        <li>
+          <span class="checkout-item">valor original</span>
+          <span class="checkout-item-value" id="price"></span>
+        </li>
+        <li>
+          <span class="checkout-item">cupom</span>
+          <span class="checkout-item-value coupon-value" id="discount" hidden>- R$ 12,00</span>
+        </li>
+        <li>
+          <span class="checkout-item">frete</span>
+          <span class="checkout-item-value" id="shipping-price"></span>
+        </li>
+        <li>
+          <span class="checkout-item">total</span>
+          <span class="checkout-item-value total" id="total-price"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container section">
+    <div class="button-group">
+      <button class="enjoei-button is-enjoei-secondary" id="button-cancel-offer">cancelar</button>
+      <button class="enjoei-button is-enjoei-primary" id="button-confirm-offer">confirmar</button>
+    </div>
+  </div>
+<!-- Modal accept -->
+
+  <div id="modal-confirm-offer" class="modal is-small">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <div class="media-content">
+          <div class="content">
+            <div class="icon">
+              <i class="fas fa-shopping-cart confirm-cart"></i>
+            </div>
+            <p>
+              <strong>compra confirmada</strong> <br>
+              enviaremos atualizações sobre o pedido no seu email.
+            </p>
+          </div>
+        </div>
+      </div>
+    <button class="modal-close is-large" id="close-modal-confirm"></button>
+  </div>
+  </div>
+  <div id="modal-cancel-offer" class="modal is-small">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <div class="media-content">
+            <div class="content">
+              <div class="icon">
+                <i class="fas fa-shopping-cart cancel-cart"></i>
+              </div>
+              <p>
+                <strong>compra cancelada</strong> <br>
+                enviaremos atualizações sobre o pedido no seu email.
+              </p>
+            </div>
+          </div>
+      </div>
+      <button class="modal-close is-large" id="close-modal-cancel"></button>
+    </div>
+    </div>
+  <script src="../../../script/app.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+</body>
+</html>

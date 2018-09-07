@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat'
+}
+.header {
+	position: relative;
+	height: 60px;
+  background: #ffffff; 
+}
+.hidden {
+  display: none;
+}
+.section {
+  border-top: 1px solid #f4f2f0;
+}
+.header img {
+	display: block;
+	margin: 10px auto;
+	height: 40px;
+}
+.enjoei-button {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px 35px;
+  border-radius: 3px;
+  line-height: 25px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.button-group {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+.enjoei-button.is-enjoei-primary {
+  background-color: #f05b78;
+  color: white;
+  border: 1px solid #d25069;
+  border-bottom-width: 3px;
+}
+.enjoei-button.is-enjoei-secondary {
+  color: #f05b78;
+  background-color: white;
+  border: 1px solid #e4e1df;
+  border-bottom-width: 3px;
+}
+.product-image {
+  margin: 10px auto 10px auto;
+  width: 100px;
+}
+.section-title {
+  font-weight: 700;
+}
+
+.checkout-image {
+  padding: 31px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkout-image img {
+  border-radius: 3px;
+}
+.checkout-header {
+  align-items: center;
+  background-color: rgb(249, 248, 247);
+  box-sizing: border-box;
+  color: rgb(125, 122, 119);
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  justify-content: space-between;
+  line-height: 20px;
+  padding: 20px 30px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.checkout-title {
+  box-sizing: border-box;
+  color: rgb(91, 88, 85);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+	overflow: auto;
+}
+
+ul li{
+  color: #AAAAAA;
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 50px;
+}
+
+ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label{
+  display: block;
+  position: relative;
+  font-weight: 300;
+  padding: 5px 25px 25px 50px;
+  margin: 10px auto;
+  height: 20px;
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+
+ul li .check{
+  display: block;
+  position: absolute;
+  border: 1px solid #AAAAAA;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+  top: 20px;
+  left: 20px;
+	z-index: 5;
+	transition: border .15s linear;
+	-webkit-transition: border .15s linear;
+}
+
+ul li .check::before {
+  display: block;
+  position: absolute;
+	content: '';
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
+  top: 5px;
+	left: 5px;
+  margin: auto;
+	transition: background 0.15s linear;
+	-webkit-transition: background 0.15s linear;
+}
+input[type=radio]:checked ~ .check {
+}
+
+input[type=radio]:checked ~ .check::before{
+  background: #f05b78;
+}
+
+input[type=radio]:checked ~ label{
+  color: #f05b78;
+}
+.value-coupon-list {
+  float: right;
+  margin-right: 30px
+}
